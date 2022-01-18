@@ -1,3 +1,5 @@
+import pandas as pd
+
 def extract_titles(name):
     return name.split()[0]
 
