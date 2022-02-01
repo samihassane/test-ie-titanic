@@ -6,7 +6,7 @@ from titanic_utils.str_utils import extract_titles
 
 def main():
     parser = argparse.ArgumentParser(description="Extract the title from a name")
-    parser.add_argument("--name", required=True, help="Name to extract title from")
+    parser.add_argument("-n", "--name", required=True, help="Name to extract title from")
     args = parser.parse_args()
     print(extract_titles(args.name))
 
