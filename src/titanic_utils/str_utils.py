@@ -2,7 +2,12 @@ import pandas as pd
 
 
 def extract_titles(name):
-    return name.split()[0]
+    # if name.contains("."):
+    # if pd.Series(name).str.contains(".", regex=False)[0]:
+    if "." in name:
+        return name.split()[0]
+    else:
+        raise ValueError()
 
 
 print(__name__)

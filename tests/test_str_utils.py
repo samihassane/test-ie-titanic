@@ -22,3 +22,8 @@ def test_extract_titles_return_expected_output(expected_input, expected_output):
 
     # 3 Verify
     assert output == expected_output
+
+
+def test_extract_titles_without_dot_raises_error():
+    with pytest.raises(ValueError):
+        extract_titles("Alabama")
