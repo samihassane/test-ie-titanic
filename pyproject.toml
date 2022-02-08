@@ -18,4 +18,5 @@ extract_titles = "titanic_utils.cli:main"
 dev = [
     "black",
     "pytest",
+    "hypothesis",
 ]
