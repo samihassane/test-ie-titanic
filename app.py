@@ -1,5 +1,7 @@
 from flask import Flask, request
 
+from titanic_utils.str_utils import extract_titles
+
 app = Flask(__name__)  # flask needs a parameter
 
 
@@ -15,3 +17,7 @@ def hello():
         return f"{greeting}, {name}!"
     else:
         return "Hello, stranger"
+
+@app.route("/extract_titles")
+def extract_titles_endpoint():
+    return extract_titles(request.args["name"])
